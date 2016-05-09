@@ -1,19 +1,10 @@
 ---
-layout: posts
+layout: post
+title:  "ファインマン物理学 (1)力学 第1章〜第9章"
+date:   2016-05-09 18:00:00 +0900
+categories: feynman
 ---
 #ファインマン物理学1: 力学
-
-※本文書は「MacDown」で開くと数式が表示される。なお、数式を表示するためにはメニューのMacDownからPreferenceを開き、Renderingタブの、
-
-- TeX like math syntax
-- Use doller sign……
-
-を有効にする必要がある。
-
-$$
-a=\sqrt{b}
-$$
-
 
 ## 第1章 躍るアトム
 物質は原子からできている。

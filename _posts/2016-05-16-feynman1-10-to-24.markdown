@@ -1,8 +1,10 @@
 ---
-layout: posts
+layout: post
+title:  "ファインマン物理学 (1)力学 第10章〜第24章"
+date:   2016-05-16 18:00:00 +0900
+categories: feynman
 ---
 #ファインマン物理学1: 力学
-(This requires MacDown.)
 
 ## 第10章 運動量の保存
 ## 第11章 ベクトル
