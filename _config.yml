@@ -19,5 +19,7 @@ github_username:  flashingwind
 
 # Build settings
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
 
 excerpt_separator: <!--more-->
