@@ -68,4 +68,5 @@ $$
 
 > Munk と Cartwright (1966)(※) によって
 応答法と呼ばれる新しい解析・予報方式も提案されている．この方法は，天体の起潮力を入力，潮汐現象を出力とするダイナミカルシステムとして潮汐現象を解析するものである．応答法は，調和法に比べ計算が複雑なため，実用的には，まだまだ調和法が広く用いられている
+
 という記述がある(※: W. H. Munk, D. E. Cartwright (1966) *Tidal Spectroscopy and Prediction,* Philosophical Transactions of the Royal Society: A, Volume: 259 Issue: 1105, p. 533-81.)
