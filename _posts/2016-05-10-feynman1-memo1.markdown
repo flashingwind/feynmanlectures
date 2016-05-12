@@ -37,6 +37,6 @@ categories: feynman
 
 そもそも潮汐による海水の水位変化はきれいなsin波じゃないらしい。
 
-<img id="tideLevelImage" border="0" alt="潮位グラフ" src="http://www.jma.go.jp/jp/choi/data/graph/124501/lvl_3_20160511.png" usemap="#day">
+![銚子漁港の潮位の実況(5月10日 - 12日)(気象庁)]({{site.baseurl}}/img/lvl_3_20160511.png)
 
 ※「[気象庁｜各地点潮位観測情報 銚子漁港[気象庁]の潮位の実況(5月10日 - 12日)](http://www.jma.go.jp/jp/choi/graph.html?areaCode=&pointCode=124501&index=0)」
