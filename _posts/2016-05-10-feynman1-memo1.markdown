@@ -8,7 +8,15 @@ categories: feynman
 ## 現実の潮汐と月のデータ
 - 気象庁は精度の高い計算式をもっている
 - 波形は24h周期と12h周期の、周波数が違う正弦波の和
+- 強制運動のメカニズムが2つあると考えるほうがわかりやすい
 - 月の南中と潮汐の位相差はびみょーである
+- 干潮・満潮は天体の運動と比較するには向かない
+
+銚子漁港の5/11前後の潮と月の動きは次の表のようになっている。
+
+72時間の範囲で潮の動きをグラフにしたものが1枚目、そのグラフを1カ月の範囲で描いたのが2枚目の画像である。
+
+表と1枚目を比較すると、干潮・満潮は極大・極小であって、天体の運動と比較するには向かないことが分かる。
 
 |日付時刻|相対時間[h]|イベント|潮位[cm]|南中高度[°]|
 |:--|--:|--:|--:|--:|
@@ -35,12 +43,17 @@ categories: feynman
 
 ※月の南中時刻は「[国立天文台 > 暦計算室 > こよみの計算](http://eco.mtk.nao.ac.jp/cgi-bin/koyomi/koyomix.cgi)」による理論値
 
-そもそも潮汐による海水の水位変化はきれいなsin波じゃないらしい。
+そもそも潮汐による海水の水位変化はきれいな正弦波じゃないらしい。
 
 ![銚子漁港の潮位の実況(5月10日 - 12日)(気象庁)]({{site.baseurl}}/img/lvl_3_20160511.png)
 
 ※「[気象庁｜各地点潮位観測情報 銚子漁港[気象庁]の潮位の実況(5月10日 - 12日)](http://www.jma.go.jp/jp/choi/graph.html?areaCode=&pointCode=124501&index=0)」
 
+![潮汐観測資料 速報値 銚子漁港 （CHOSHIGYOKO）毎時潮位グラフ(速報値)2016年5月(気象庁)]({{site.baseurl}}/img/CHOSHIGYOKO2016-05.png)
+
+潮汐観測資料 速報値 銚子漁港 (CHOSHIGYOKO) 2016年5月
+
+※[気象庁 | 潮汐・海面水位のデータ 潮汐観測資料（速報値）　2016年5月](http://www.data.jma.go.jp/gmd/kaiyou/db/tide/sokuho/genbo.php?stn=124501)
 
 ## 「分潮」・「調和分解」: 一般的な潮汐予測モデル
 
@@ -69,4 +82,12 @@ $$
 > Munk と Cartwright (1966)(※) によって
 応答法と呼ばれる新しい解析・予報方式も提案されている．この方法は，天体の起潮力を入力，潮汐現象を出力とするダイナミカルシステムとして潮汐現象を解析するものである．応答法は，調和法に比べ計算が複雑なため，実用的には，まだまだ調和法が広く用いられている
 
-という記述がある(※: W. H. Munk, D. E. Cartwright (1966) *Tidal Spectroscopy and Prediction,* Philosophical Transactions of the Royal Society: A, Volume: 259 Issue: 1105, p. 533-81.)
+という記述がある((※)引用注：W. H. Munk, D. E. Cartwright, *Tidal Spectroscopy and Prediction,* Phil. Trans. R. Soc. A, 259(1105), 1966, p. 533-81.)
+
+## 参考文献
+- 「暦計算室 > こよみの計算」、『国立天文台』、[http://eco.mtk.nao.ac.jp/cgi-bin/koyomi/koyomix.cgi](http://eco.mtk.nao.ac.jp/cgi-bin/koyomi/koyomix.cgi)
+- 「潮汐・海面水位のデータ 潮位表　銚子漁港（CHOSHIGYOKO）」、『気象庁』、[http://www.data.jma.go.jp/gmd/kaiyou/db/tide/suisan/suisan.php?stn=124501](http://www.data.jma.go.jp/gmd/kaiyou/db/tide/suisan/suisan.php?stn=124501)
+- 「各地点潮位観測情報 銚子漁港[気象庁]の潮位の実況(5月10日 - 12日)」、『気象庁』、[http://www.jma.go.jp/jp/choi/graph.html?areaCode=&pointCode=124501&index=0](http://www.jma.go.jp/jp/choi/graph.html?areaCode=&pointCode=124501&index=0)
+- 小田巻実「最小自乗法による潮汐・潮流の短期調和分解の一つの試み」、『水路部研究報告 第16号』(海上保安庁・1981年03月)、[http://www1.kaiho.mlit.go.jp/GIJUTSUKOKUSAI/KENKYU/report/rhr16/index.html](http://www1.kaiho.mlit.go.jp/GIJUTSUKOKUSAI/KENKYU/report/rhr16/index.html)
+- 「海洋物理学第6章 潮汐」、『海洋学 - 天魚のウェブサイト』、[http://www.geocities.jp/amenouoiwana/oceanography.html](http://www.geocities.jp/amenouoiwana/oceanography.html)
+- W. H. Munk, D. E. Cartwright, *Tidal Spectroscopy and Prediction,* Phil. Trans. R. Soc. A, 259(1105), 1966.
