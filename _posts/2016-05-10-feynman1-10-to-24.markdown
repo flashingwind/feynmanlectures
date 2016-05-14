@@ -370,7 +370,10 @@ $$
 
 ただし、$2\pi\rho d\rho$は半径$\rho$で幅$d\rho$の輪の面積($d\rho\ll\rho$なので、$2\pi\rho\times\rho$の長方形の面積で近似できる)。
 
-ところで、$||\mathbf{r}||^2=\rho^2=+a^2$なので、$\rho d\rho=r dr$である(？)。積分すると、
+
+ところで、
+$||\mathbf{r}||^2=\rho^2=+a^2$<!--別の行にしないと変になる-->
+なので、$\rho d\rho=r dr$である(？)。積分すると、
 
 $$
 C_x = 2\pi G\mu a \int^\infty_a\frac{dr}{r^2}
@@ -531,7 +534,8 @@ $$
 
 本当に求めたいのは$\Delta x\rightarrow 0$の$F_x$の極限である。そのときにのみ、これは厳密に正しくなる。しかし、$U$は$(x,y,z)$の関数なので、$-dU/dx$とは書けない。
 
-そこで、$y$と$z$を固定しておいて、$x$について微分することにする。これを偏微分といい、区別するために記号は$\partial$を使って、$\frac{\partial U}{\partial x}$と書く。$y$、$z$を固定することをとくに強調したいときは、$\left(\left.\frac{\partial U}{\partial x}\right|_{yz}\right)$とする。
+そこで、$y$と$z$を固定しておいて、$x$について微分することにする。これを偏微分といい、区別するために記号は$\partial$を使って、$\frac{\partial U}{\partial x}$と書く。<!--改行入れないと表になっちゃう-->
+$y$、$z$を固定することをとくに強調したいときは、$\left(\left.\frac{\partial U}{\partial x}\right|_{yz}\right)$とする。
 
 $$
 F_x=-\frac{\partial U}{\partial x}
