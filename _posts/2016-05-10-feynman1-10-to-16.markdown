@@ -954,14 +954,9 @@ $$
 $$
 v=\frac{c+u}{\displaystyle 1+\frac{uc}{c^2}}\\
 =\frac{c+u}{\displaystyle 1+\frac{u}{c}}\\
-=\frac{c+u}{c+u}c=\frac{1}{c}\\
+=\frac{c+u}{c+u}c=c\\
 $$
 
 どちらの系からみても光の速さは同じになる。
-
-<!--$$
-=c\frac{c^2}{u+c}\\
-=c\frac{u+c}{u+c}=c
-$$-->
 
 <!--## 第17章 時空の世界-->
