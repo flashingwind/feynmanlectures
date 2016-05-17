@@ -11,6 +11,16 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
   <!--MathJax-->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+          if(all[i].SourceElement().parentNode.className.indexOf('has-jax') < 0){
+            all[i].SourceElement().parentNode.className += ' has-jax';
+          }
+        }
+    });
+  </script>
 
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -30,6 +40,7 @@
         }
       });
   </script>
-
-  <script type="text/javascript" src="./MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+  <!--<script type="text/javascript" src="./MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
 </head>
