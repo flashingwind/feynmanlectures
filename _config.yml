@@ -23,3 +23,5 @@ kramdown:
   math_engine: mathjax
 
 excerpt_separator: <!--more-->
+
+keep_files: [MathJax]
