@@ -25,3 +25,10 @@ kramdown:
 excerpt_separator: <!--more-->
 
 keep_files: [MathJax]
+
+atom:
+    buildCommand:
+    - jekyll
+    - build
+    buildEnv:
+    postDirs:
