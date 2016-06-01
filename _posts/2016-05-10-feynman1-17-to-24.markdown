@@ -247,18 +247,508 @@ $$
 
 どんな粒子でも、光速で移動していれば($c=1$のとき)、 $p=E$。
 
+#### ドップラー効果
+
+運動系からみた光子のエネルギーは(17.12)(4元運動量の変換式)だが、運動量についてはエネルギーを $c$ 倍する必要がある($c=1$のため現れていない)。
+
+そのため、変換するとエネルギーが変化する。これは振動数の変化を意味している(ドップラー効果。$E=p, E=h\nu$と(17.12)から導出できる)。
 
 
 ## 第18章 平面内の回転
+### 18-1 質量の中心(重心)
+以下では、これまでより複雑な内部構造を持ったものにニュートンの法則をあてはめてみる。
 
-## 第19章 質量の中心 慣性モーメント
+先に、ひろがりのある物体が**固定軸**のまわりを回転する場合を考える: 物体のなかに1点をとると、それは軸に垂直なある平面内を回転する。そこでこの回転を**平面回転**、または2次元における回転という。2次元における回転を扱ったあと、3次元に拡張する。
+
+#### 質量の中心の定理
+
+複雑な物体の運動では、物体を代表するような「**質量の中心**」が定義でき、運動を記述するにはこの点の運動を記述すればいいことがわかっている。物体を放り投げたとき、放物線を描くのはこの点である。
+
+ある物体が、いくつかの部分($i=1,2,3,\cdots,N$)で構成されているとき、
+
+$$
+\mathbf{F}_i=m_i\left(\frac{d^2\mathbf{r}_i}{dt^2}\right).
+$$
+
+以下、$v\ll c$ とすると $m_i = const.$なので、
+
+$$
+\mathbf{F}_i=\frac{d^2 (m_i\mathbf{r}_i)}{dt^2}.
+$$
+
+これらすべての和は、
+
+$$
+\sum_i\mathbf{F}_i=\mathbf{F}=\frac{d^2 (\sum_i m_i\mathbf{r}_i)}{dt^2}.
+$$
+
+このように、全力は位置に質量をかけたものの和に等しい。
+
+ところで、すべての粒子にはたらく力は外力に等しい。内部の任意の2つの粒子間にはたらく力は、すべて釣り合っていて、方向が逆だから、足すとゼロになるからである(ニュートンの第3法則(作用・反作用の法則)。
+
+全質量に何らかの加速度をかけた形にしたい。そこで、
+
+$$
+\mathbf{R}=\frac{\sum_i m_i\mathbf{r}_i}{M}
+$$
+
+とおくと、
+
+$$
+\mathbf{F}=\frac{d^2 (M\mathbf{R})}{dt^2}=M\frac{d^2 \mathbf{R}}{dt^2}
+$$
+
+と書ける。これは、$\mathbf{R}$ の位置にあるの仮想点の加速度に質量 $M$ をかけたものである。
+
+- もしも外力がゼロで、物体が空中に浮いているとすると、物体は回転したり、振動したり、ねじれたりしても、**質量の中心は、一定の速度で運動する**
+- 特に、はじめ静止していたなら、静止しつづける
+
+ロケットが推進しているとき、重心は動かない。ロケットは質量の一部を後方に捨てて、その運動量の分だけ、進むからである。
+
+- 重心は物体の「内部」と独立して扱える
+
+### 18-2 剛体の回転
+
+- 剛体: ひろがりを持つが、ほとんど変形しない理想的な物体(全体が動く程度の力を加えても、硬くてほとんど弾性変形せず、無限に大きい力を加えても塑性変形しない)。
+
+前節では重心の運動を扱ったので、残るは回転である。
+
+物体のなかをとおる直線(重心をとおる必要はない)を考えて、その直線を固定したまま、その直線を軸に物体が回転できるとする。
+
+物体の回転は角度で表現する。「物体自身の**内部**のある角度ではない; **物体上**に角度をしるすのではない。我々が問題にするのは、**全体の位置を示す角度**が時間によってどう変化するかということである。」(？)
+
+1次元の運動で位置と速度を考えたのと同様に、平面回転の角度と角速度を考える。1次元の直線運動と平面の回転運動はほとんどあらゆる量が互いに対応する。
+
+- 回転速度(角速度): $\displaystyle \omega=\frac{d\theta}{dt}$
+- 角加速度: $\displaystyle \alpha=\frac{d\omega}{dt}=\frac{d^2\theta}{dt^2}$
+
+(メモ2016-05-31)
+
+#### (粒子の回転)
+
+一つの物体の回転の力学を考えるために、その物体を構成する粒子の力学の法則を記述し、それと関連づける必要がある。
+
+軸$O$から $r$ の距離にある点(粒子)を考えて、ある時刻 $t$ の位置が点 $P$ $(x,y)$ だったとする。それから時間が $\varDelta t$ だけたったとき、物体は $\varDelta\theta$ だけ回転し、粒子は点Qに移動した。
+
+まず、$x,y$ の変化を求める。角度の定義から $PQ=r\varDelta\theta$ なので、これを $x$ 軸、$y$ 軸に投影すると、
+
+$$
+\varDelta x = -PQ\sin\theta = -r\varDelta\theta\frac{y}{r} = -y\varDelta\theta,\\
+$$
+
+同様に、
+
+$$
+\varDelta y = -x\varDelta\theta.
+$$
+
+この物体の角速度を $\omega$ とし、(18.6)(18.7)の両辺を $\varDelta t$ でわると、
+
+$$
+v_x = -\omega y, \quad v_y = +\omega x
+$$
+
+となる。その大きさは
+
+$$
+||\mathbf{v}||=v=\sqrt{ {v_x}^2+{v_y}^2 }=\sqrt{\omega^2 y^2 + \omega^2 x^2}
+=\omega\sqrt{x^2+y^2}=\omega r
+$$
+
+である。
+
+
+#### (回転の力学)
+
+- 力 $\leftrightarrow$ 直線運動
+- トルク $\leftrightarrow$ 回転運動
+
+仕事との関係からトルクを定義する。直線運動のときと同じ形になるように、
+
+$$
+(トルク)\times (角度) = (仕事)
+$$
+
+とおく。
+
+一つの剛体にいくつかの力がはたらき回転している。軸を一つ決める。力を一つ選ぶ。この力は $(x,y)$ にはたらいている。
+
+微少な角度回転したときのなされた仕事は、
+
+$$
+\varDelta W = F_x\varDelta x + F_y \varDelta y\\
+$$
+
+であり、前述の式を代入すると、
+
+$$
+\varDelta W = (xF_y - yF_x)\varDelta\theta
+$$
+
+である。すなわち、$(xF_y - yF_x)$ がトルクに相当する。上記の通りトルクを定義したところ、トルクを力によってあらわす式が得られた。
+
+$$
+\tau=x_iF_{y}-y_iF_{x}
+$$
+
+力が複数ある場合、各力のなした仕事の和が全体になされた仕事である。そして、その各力のなした仕事は $\varDelta \theta$ に比例する。$\varDelta \theta$ は全体に共通なので、トルクのみを合計してから $\varDelta \theta$ をかけてもよい。この和を全トルク $\tau$ という。
+
+2次元の回転については、
+
+$$
+\tau_i=x_iF_{yi}-y_iF_{xi}
+$$
+
+$$
+\tau = \sum_i \tau_i
+$$
+
+である。
+
+なお、トルクは軸によって変わる。
+
+#### (力の和がゼロのとき、トルクの和もゼロである)
+
+> 一つの物体にはたらいているすべての力が、平行変位に対しても回転に対してもつりあっているというのならば、微小な変位に対しては力は仕事をしない。
+
+このとき、**合力がゼロ**かつ**トルクの和もゼロ**である。(なぜならば、$\varDelta W=\tau \varDelta\theta = 0$ であり、すべてのトルクの和もゼロだと言えるからである。)
+
+[問]　(2次元の場合には)ただ一つの任意の軸について、トルクの和がゼロであることをたしかめれば十分上記のことがいえることを証明せよ。
+
+[答え]ある軸について、
+
+$$
+\varDelta W = (xF_y - yF_x)\varDelta \theta=0
+$$
+
+である。よって、どの軸についても仕事はなされないから……(？)。
+
+#### (トルクの幾何学的解釈)
+
+$xF_y - yF_x$の幾何学的な意味。
+
+力 $\mathbf{F}$ が点 $\mathbf{r}$ にはたらいて、物体が微少な角度 $\varDelta\theta$ だけまわった(図18-2)。このときなされた仕事は、
+
+$$
+(仕事)=(変位の方向の分力)\times (変位)
+$$
+
+である。接線方向の分力だけに意味があり、それに変位 $r\varDelta\theta$ をかけたのが仕事だからである。
+
+したがって、トルクは、
+
+$$
+(トルク)=(接線方向の分力)\times(半径)\\
+=(力)\times\sin\alpha\times(半径)
+$$
+
+ともいえる(2行目は図18-2参照)。これは物体を半径方向に押しても回転しないという日常感覚とも一致する。
+
+トルクには第3の式がある。
+
+$$
+(トルク)=(力)\times(うでの長さ)
+$$
+
+うでの長さとは、軸から力のはたらく線上(力点をとおり、力のベクトルと平行な線)にたらした垂線の長さである。
+
+### 18-3 角運動量
+
+剛体ではない物体に拡張する。
+
+> 粒子のよりあつまりにはたらく外力は、$p$ という量が時間的に変化する割合であって、$p$ をその全運動量と名付けた
+> 
+> 粒子のよりあつまりに外からはたらくトルクは、$L$ という量が時間的に変化する割合であって、$L$ をその角運動量という
+
+[証明]？
+
+ここに、いくつかの粒子からなる系があって、そこにいくつかの力がはたらいている。これらの力によるトルクがはたらいた結果として何が起きるか
+
+### (一つの粒子)
+
+まず、粒子
+
+$$
+\tau=xF_{y}-yF_{x}\\
+= xm\frac{d^2y}{dt^2}-ym\frac{d^2x}{dt^2}
+$$
+
+$$
+\frac{d}{dt}\left[ xm\frac{dy}{dt}-ym\frac{dx}{dt} \right]\\
+= xm\frac{d^2y}{dt^2} +\frac{dx}{dt}m\frac{dy}{dt}\\
+ -ym\frac{d^2x}{dt^2} -\frac{dy}{dt}m\frac{dx}{dt}\\
+= xm\frac{d^2y}{dt^2} -ym\frac{d^2x}{dt^2}\\
+$$
+
+$$
+L=xm\frac{dy}{dt}-ym\frac{dx}{dt} = xp_y + yp_x
+$$
+
+$$
+L= xp_y + yp_x\\
+=rp_{接線}\\
+=p \times (うでの長さ)
+$$
+
+### 18-4 角運動量の保存
+
+$$
+\tau = \sum_i \tau_i = \sum_i\frac{dL_i}{dt}=\frac{dL}{dt}
+$$
+
+$$
+\tau = \sum_i \tau_i = \tau =\frac{dL}{dt}
+$$
+
+#### (慣性モーメントの定義)
+
+$$
+L_i = m_i v_i r_i = m_i {r_i}^2 \omega
+$$
+
+$$
+L=I\omega
+$$
+
+$$
+I=\sum_im_i{r_i}^2
+$$
+
+## 第19章 質量の中心; 慣性モーメント
+
+### 19-1 質量の中心の性質
+
+#### (重心の位置)
+
+$$
+\mathbf{R}_{CM}=\frac{\sum m_i\mathbf{r}_i}{\sum m_i}
+$$
+
+$$
+X_{CM}=\frac{\sum m_i x_i}{\sum m_i}=\frac{m_i\sum x_i}{N m_i}=\frac{\sum x_i}{N}
+$$
+
+#### (合成)
+
+$$
+MX_{CM}=\sum_A m_i x_i +\sum_B m_i x_i=M_A X_A + M_B X_B
+$$
+
+#### (質量の中心と重心)
+
+$$
+\tau = \sum m_i g x_i = g\sum m_i x_i
+$$
+
+### 19-2 質量の中心の位置を求めること
+
+$$
+(2\pi x)\left( \frac{1}{2}HD \right)=\frac{1}{3}\pi D^2H\\
+$$
+
+$$
+x=\frac{D}{3},\\
+y=\frac{H}{3}
+$$
+
+$$
+(2\pi x)\left( \frac{1}{2}\pi r^2 \right)=\frac{4\pi r^3}{3}
+$$
+
+$$
+x=\frac{4r}{3\pi}
+$$
+
+### 19-3 慣性モーメントを求めること
+
+$$
+I=\sum m_i({x_i}^2+{y_i}^2)
+$$
+
+$$
+I = \int(x^2y^2)dm = \int(x^2y^2)\rho dv
+$$
+
+$$
+dm=\frac{Mdx}{L}
+$$
+
+$$
+I = \int^L_0x^2\frac{Mdx}{L} = \frac{M}{L}\int^L_0x^2dx = \frac{ML^2}{3}
+$$
+
+$$
+I = \frac{2\frac{M}{2}\left(\frac{L}{2}\right)^2}{3}\\
+= \frac{ML^2}{12}
+$$
+
+$$
+I=I_c+M{R_{CM}}^2
+$$
+
+$$
+x_i = x_i' + X_{CM},\\
+{x_i}^2 = {x_i'}^2 + 2X_{CM}x_i' + {X_{CM}}^2
+$$
+
+$$
+I_x = \sum{m_i x_i'}^2 + 2X_{CM}\sum m_i x_i' + {X_{CM}}^2\sum m_i
+$$
+
+$$
+I_x = \sum m_i({y_i}^2+{z_i}^2) = \sum m_i{y_i}^2,\\
+I_y = \sum m_i({x_i}^2+{z_i}^2) = \sum m_i{x_i}^2,\\
+I_z = \sum m_i({x_i}^2+{y_i}^2) = \sum m_i{x_i}^2 + \sum m_i{y_i}^2
+$$
+
+$$
+I = \frac{M(W^2+L^2)}{12}
+$$
+
+$$
+I_z = \sum m_i({x_i}^2+{y_i}^2) = \int({x_i}^2+{y_i}^2)dm
+$$
+
+
+### 19-4 回転の運動エネルギー
+
+$$
+T=\frac{1}{2}\sum m_i v_i^2 = \frac{1}{2}\sum m_i(r_i\omega_i)^2
+$$
+
+$$
+T = \frac{1}{2}\omega^2\sum m_ir_i^2 = \frac{1}{2}I\omega^2
+$$
+
+#### (モーメントを変化させるときのエネルギー)
+
+#### (コリオリの力)
+
+$$
+\tau = F_er = \frac{dL}{dt} = \frac{m\omega r^2}{dt} = 2m\omega r\frac{dr}{dt}
+$$
+
+$$
+F_e = 2m\omega v_r
+$$
+
+$$
+F_r = - \frac{m{v_{太郎}}^2}{r} = - \frac{m{v_{次郎}}^2}{r}-2mv_{次郎}\omega -m\omega^2r
+$$
+
 
 ## 第20章 3次元空間における回転
+### 20-1 3次元のトルク
 
-## 第21章 調和振動子
+$$
+\tau_{xy}=xF_y-yF_x,\\
+\tau_{yz}=yF_z-zF_y,\\
+\tau_{zx}=zF_x-xF_z
+$$
+
+$$
+\tau_{x'y'}=x'F_{y'}-y'F_{x'},\\
+\tau_{y'z'}=y'F_{z'}-z'F_{y'},\\
+\tau_{z'x'}=z'F_{x'}-x'F_{z'}
+$$
+
+$$
+x'=x\cos\theta+y\sin\theta,\\
+y'=y\cos\theta-x\sin\theta,\\
+z'=z
+$$
+
+$$
+F_{x'}=F_x\cos\theta+F_y\sin\theta,\\
+F_{y'}=F_y\cos\theta-F_x\sin\theta,\\
+F_{z'}=F_z
+$$
+
+$$
+\tau_{x'y'}=(x\cos\theta+y\sin\theta)(F_y\cos\theta-F_x\sin\theta)\\
+-(y\cos\theta-x\sin\theta)(F_x\cos\theta+F_y\sin\theta)\\
+\cdots\cdots\\
+=xF_y-yF_x=\tau_{xy}\\
+$$
+
+$$
+\tau_{y'z'}=\tau_{yz}\cos\theta+\tau_{zx}\sin\theta,\\
+\tau_{z'x'}=\tau_{zx}\cos\theta-\tau_{yz}\sin\theta
+$$
+
+$$
+\begin{array}{rcl}
+\tau_{x'y'}&=&\tau_{xy},\\
+\tau_{y'z'}&=&\tau_{yz}\cos\theta+\tau_{zx}\sin\theta,\\
+\tau_{z'x'}&=&\tau_{zx}\cos\theta-\tau_{yz}\sin\theta
+\end{array}
+$$
+
+#### (ベクトル積(外積))
+
+$\mathbf{c=a\times b}$ であるならば、
+
+$$
+c_x=a_yb_z-a_zb_y,\\
+c_y=a_zb_x-a_zb_x,\\
+c_z=a_xb_y-a_yb_x
+$$
+
+1. $\mathbf{a\times\left(b+c\right)=a\times b+a\times c}$
+1. $\mathbf{\left(\alpha a\right)\times b=\alpha\left(a\times b\right)}$
+1. $\mathbf{a\cdot\left(b\times c\right)=\left(a\times b\right)\cdot c}$
+1. $\mathbf{a \times \left(b \times c\right)=b\left(a\cdot c\right)-c\left(a\cdot b\right)}$
+1. $\mathbf{a \times a = 0}$
+1. $\mathbf{a \cdot \left(a\times b\right)}=0$
+
+
+### 20-2 ベクトル積(外積)を用いた回転の方程式
+
+$$
+\tau = \mathbf{r\times F}
+$$
+
+$$
+\mathbf{L = r\times p}
+$$
+
+$$
+\tau = \frac{d\mathbf{L}}{dt}
+$$
+
+$$
+\tau_{外力} = \frac{d\mathbf{L}_{合計}}{dt}
+$$
+
+
+### 20-3 ジャイロスコープ
+
+$$
+\tau = \Omega \times L_0
+$$
+
+$$
+\tau = \frac{d\mathbf{L}}{dt} = \Omega \times L_0
+$$
+
+
+### 20-4 剛体の角運動量
+$$
+\mathbf{L}= A\omega_x\mathbf{i}+B\omega_y\mathbf{j}+C\omega_z\mathbf{k}
+$$
+
+$$
+(K.E.)=\frac{1}{2}(A{\omega_x}^2+B{\omega_y}^2+C{\omega_z}^2)\\
+=\frac{1}{2}\mathbf{L\omega}
+$$
+
+(数式入力2016-06-01)
+
+<!--## 第21章 調和振動子
 
 ## 第22章 代数
 
 ## 第23章 共鳴
 
 ## 第24章 過渡現象
+-->
