@@ -532,11 +532,11 @@ $$
 
 太陽系の各惑星にはたらく接線方向の力はゼロなので、トルクもゼロである。
 
-したがって、角運動量は一定で、
+したがって、角運動量は一定であり、
 
 $$
 (角運動量)=(速度の接線成分)\times(質量)\times(半径)=const.\\
-\rightarrow (速度の接線成分)\times(半径)=const.
+\Rightarrow (速度の接線成分)\times(半径)=const.
 $$
 
 である。
@@ -544,21 +544,21 @@ $$
 なぜなら、
 
 $$
-\tau=\frac{dL}{dt}=0\\
-\rightarrow L=const.
+\because\quad\tau=\frac{dL}{dt}=0\\
+\Rightarrow L=const.
 $$
 
-したがって、短い時間$\varDelta t$に惑星が$P$から$Q$に移動したとき(図18-3)、$OPQ$に対して$QQ'P$を無視できて、動径のなめた面積は、
+したがって、短い時間$\varDelta t$に惑星が$P$から$Q$に移動したとき(図18-3)、$OPQ$に対して$QQ'P$を無視できて、時間$\varDelta t$に動径のなめた面積は、
 
 $$
-(底辺PQ)\times(高さOR)\times\frac{1}{2}\\
+\frac{(面積)}{\varDelta t}=(底辺PQ)\times(高さOR)\times\frac{1}{2}\\
 =(速度)\times(速度のうでの長さ)\times\frac{1}{2}
 $$
 
-よって、
+よって、$(速度)\times(速度のうでの長さ)$は角速度だから
 
 $$
-\frac{(面積)}{\varDelta t} 比例 (角運動量)=const.
+\frac{(面積)}{\varDelta t} \propto (角運動量)=const.
 $$
 
 つまり、
@@ -819,11 +819,231 @@ $$
 
 (数式入力2016-06-01)
 
-<!--## 第21章 調和振動子
+
+## 第21章 調和振動子
+### 21-1 線形微分方程式
+
+n階の定数係数線形微分方程式:
+
+$$
+\frac{a_n d^{(n)}x}{dt^{(n)}} + \frac{a_{n-1} d^{(n-1)}x}{dt^{(n-1)}} + \cdots + \frac{a_1 dx}{dt} + a_0x =f(f)
+$$
+
+
+### 21-2 調和振動子
+
+$$
+\frac{md^2x}{dt^2}=-kx
+$$
+
+$k/m=1$だったとすると、
+
+$$
+\frac{md^2x}{dt}=-x
+$$
+
+二階微分すると元の関数にマイナスをつけたものになる関数:
+
+$$
+x=\cos t,\\
+\frac{dx}{dt}=-\sin t,\\
+\frac{d^2x}{dt^2}=-\cos t=-x\\
+$$
+
+$$
+x=\cos \omega_0 t
+$$
+
+$$
+\frac{d^2x}{dt^2}=-\omega_0 x\\
+$$
+
+$$
+t_0=\frac{2\pi}{\omega_0}=2\pi\sqrt{\frac{m}{k}}
+$$
+
+$$
+\cos\omega_0t \cos\varDelta - \sin\omega_0t \sin\varDelta,\\
+\Rightarrow x=A\cos\omega_0t + B\sin\omega_0t
+$$
+
+ただし、$A=\alpha\cos\varDelta$かつ、$B=-\alpha\sin\varDelta$。
+
+つまり、$\frac{d^2x}{dt^2}=-\omega_0 x$の一般解は、
+
+$$
+x=a\cos\omega_0(t-t1),\\
+=a\cos(\omega_0t-\varDelta),\\
+=A\cos\omega_0t + B\sin\omega_0t
+$$
+
+ここで使用した定数のうち、
+
+- $\omega_0$: 角振動数。微分方程式によってきまる
+- 他の定数: 初期条件によりきまる
+  - $a$: 振幅
+  - $\varDelta$: 位相、「位相のずれ」とよぶことにする(日本では通常、位相差という)
+  - $\omega_0t-\varDelta$: こちらを位相と呼ぶこともある
+
+### 21-3 調和振動と円運動
+
+$$
+\theta=\frac{vt}{R}
+$$
+
+$$
+\frac{d\theta}{dt}=\omega_0=\frac{v}{R},\\
+$$
+
+このとき、すでに述べたとおり、中心に向かう加速度$a$、
+
+$$
+a=\frac{v^2}{R}={\omega_0}^2R
+$$
+
+がある。
+
+$$
+x=R\cos\theta, y=\sin\theta
+$$
+
+$$
+a_x=-a\cos\theta = -\omega_0^2R\cos\theta = -\omega_0^2x
+$$
+
+### 21-4 初期条件
+
+$$
+x=A\cos\omega_0t + B\sin\omega_0t
+$$
+
+とおく。また、
+
+$$
+v=\frac{dx}{dt}=-\omega_0A\sin\omega_0t + \omega_0B\cos\omega_0t
+$$
+
+とおく。
+
+これらの式に$t=0$を代入すると、
+
+$$
+x_0=A\times 1 + B\times 0 = A,\\
+v_0=-\omega_0A\times0 + \omega_0B\times1 = \omega_0B
+$$
+
+つまり、
+
+$$
+A = x_0, 
+B = \frac{v_0}{\omega_0}
+$$
+
+公式
+
+$$
+x=a\cos(\omega_0t-\varDelta)
+$$
+
+を使うと、
+
+$$
+v=\frac{dx}{dt}=-\omega_0a\sin(\omega_0t-\varDelta)
+$$
+
+#### (位置エネルギーと運動エネルギー)
+
+位置エネルギーは、バネ定数$k$を使うと次のように書ける。さらに$x$に上記の式を代入すると、
+
+$$
+U = \frac{1}{2}kx^2 = \frac{1}{2}ka^2 \cos^2(\omega_0t+\varDelta)
+$$
+
+運動エネルギーも同様に、
+
+$$
+T=\frac{1}{2}mv^2 = \frac{1}{2}m \omega_0^2 a^2 \sin^2(\omega_0t+\varDelta)
+$$
+
+ところで、
+
+- $x$の極大では速度はゼロで、運動エネルギーもゼロ
+- $x$がゼロの位置を通過する瞬間に速度は極大になり、運動エネルギーも極大になる
+
+$$
+T+U = \frac{1}{2}k a^2 \cos^2(\omega_0t+\varDelta)
++ \frac{1}{2}m \omega_0^2 a^2 \sin^2(\omega_0t+\varDelta)\\
+= \frac{1}{2}m \omega_0^2 a^2
+\left[
+\cos^2(\omega_0t+\varDelta) + \sin^2(\omega_0t+\varDelta)
+\right]\\
+\because k = m\omega_0^2
+$$
+
+### 21-5 強制振動
+
+強制調和振動子の運動方程式:
+
+$$
+\frac{m d^2x}{dt^2} = -kx + F(t)
+$$
+
+#### (外力1)
+
+ここで外力を、
+
+$$
+F(t)=F_0\cos\omega t
+$$
+
+とする。
+
+このとき、$\omega \neq \omega_0$かもしれないことに注意。
+
+一つの特解を紹介する。:
+
+$$
+x=C\cos\omega t
+$$
+
+したがって、周期は$\omega$になる。ただし、$C$はある定数である。
+
+次に、準備として$x$を二階微分し、$m$をかけたものを導出しておく。:
+
+$$
+m\frac{d^2x}{dt^2} = -m\omega^2C\cos\omega t
+$$
+
+上記4式をまとめると、
+
+$$
+-m\omega^2C\cos\omega t = -m\omega_0^2C\cos\omega t + F_0\cos\omega t\\
+\because k = m\omega_0^2
+$$
+
+が成り立つ。
+
+この式は両辺を$\cos\omega t$でわることができ、まとめると、$C$がどのようなものでなければならないかわかる。
+
+$$
+C = \frac{F_0}{m({\omega_0}^2 -\omega^2)}
+$$
+
+- $m$は外力の振動数で振動
+- 振幅は、外力の(入力)振動数$\omega$と振動子の自己振動数$\omega_0$に依存
+  - $\omega\ll\omega_0$では変位の方向と外力の方向は一致
+  - $\omega\gg\omega_0$では振幅$C$は負になる(位相が逆)
+  - $\omega_0$を中心として、$\omega$がそこから離れるほど上記式の分母が大、振幅$C$は小さくなる
+  - 上記の式は$\omega\rightarrow\omega_0$では$C\rightarrow\inf$になるが、現実の物体には、ここでは無視している摩擦などの項が影響してくるし、バネがこわれることもあるため無限大にはならない
+
+上記は特解のうちのひとつ(定常応答)であり、実際には、減衰するような成分もある(F(t)に対する過渡応答という)。
+
+(ごめん、こないだ潮汐力の話のとき言ったのは、インパルス応答(($\omega=0〜\inf$)の振動を一度に行った場合、または順番にためしてその結果を周波数領域で重ね合わせた場合)のことでした……。単一の外力の周波数$\omega$に対する周波数領域のピークは一つで、その周波数は$\omega$です！　勘違いしてた！)
+
+(2016/06/03)
 
 ## 第22章 代数
 
 ## 第23章 共鳴
 
-## 第24章 過渡現象
--->
+<!--## 第24章 過渡現象-->
