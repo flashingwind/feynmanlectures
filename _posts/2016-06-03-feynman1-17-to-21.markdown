@@ -1208,9 +1208,10 @@ $$
 
 と書くことにする。
 
-この演算の性質は下記のようになる・
+この演算の性質は下記のようになる。
 
-1. $\mathbf{c=a\times b}$のとき、$\mathbf{|c|=|a||b|}\sin\mathbf{\angle ab}$(方向は$\mathbf{a}$を$\mathbf{b}$に向かって近い側から動かした方向に右ネジを回したとき進む方向)
+1. $\mathbf{c=a\times b}$のとき、
+$\mathbf{|c|=|a||b|}\sin\mathbf{\angle ab}$ (向きは$\mathbf{a}$を$\mathbf{b}$に向かって近い側から動かした方向に右ネジを回したとき進む向き)
 1. $\mathbf{a\times b=-b\times a}$
 1. $\mathbf{a\times\left(b+c\right)=a\times b+a\times c}$
 1. $\mathbf{\left(\alpha a\right)\times b=\alpha\left(a\times b\right)}$
