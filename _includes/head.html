@@ -34,11 +34,19 @@
   </script>
 
   <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        "HTML-CSS": {
+    MathJax.Hub.Config({
+      "HTML-CSS": {
           preferredFont: "Neo-Euler"
+        },
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
         }
-      });
+      },
+      CommonHTML: {
+        scale: 120
+      }
+    });
   </script>
   <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
   </script>
