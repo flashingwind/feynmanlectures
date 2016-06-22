@@ -14,6 +14,14 @@ url: "http://flashingwind.github.io/" # the base hostname & protocol for your si
 twitter_username: FLASH1N
 github_username:  flashingwind
 
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "default"
+
 # Build settings
 markdown: kramdown
 kramdown:
